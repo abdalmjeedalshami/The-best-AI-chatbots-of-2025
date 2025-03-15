@@ -1,0 +1,180 @@
+main {
+    background-color: red;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    width: 85%;
+    align-items: center;
+    padding-left: 15%;
+    background-color: rgba(0, 0, 255, 0.159);
+}
+
+.nav-bar {
+    flex-direction: column;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    left: 0;
+    background-color: rgb(0, 43, 43);
+    width: 15%;
+    height: calc(100%);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar a {
+    display: block;
+    color: wheat;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-align: end;
+}
+
+.nav-bar p {
+    text-align: center;
+    color: #ccc;
+}
+
+.nav-bar a:hover {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+
+.header-banner {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: rgb(144, 152, 152);
+    border-bottom: 1px solid #ccc;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo img {
+    padding: 0 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header-title {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.header-title:hover {
+    color: rgb(0, 60, 60);
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    padding-right: 10px;
+}
+
+.header-actions a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.header {
+    display: table-cell;
+    width: 100%;
+    padding: 60px 20px;
+    padding-top: 100px;
+    background-color: rgba(0, 128, 128, .1);
+}
+
+.header-info {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.header_info-nav-item a {
+    text-decoration: none;
+}
+.header_info-nav-item a:hover {
+    color: teal;
+}
+
+.header_info-nav-item::before {
+    content: "/";
+}
+
+.header_info-nav-item:first-child::before {
+    content: "";
+}
+
+.content {
+    padding-left: 20px;
+    padding-right: 300px;
+}
+
+h1 {
+    color: #313e32;
+}
+
+.h2-and-h3 a {
+    display: table-cell;
+    text-decoration: none;
+    color: #313e32;
+}
+
+a {
+    color: black;
+}
+
+.content a:hover {
+    color: teal;
+}
+
+.content section {
+    padding: 45px 16px;
+}
+
+.separator {
+    padding: 16px 0;
+}
+
+.about {
+    padding-left: calc(15% + 20px);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: teal;
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: rgb(0, 66, 66); /* Darker blue on hover */
+}

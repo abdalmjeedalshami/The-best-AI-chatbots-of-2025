@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back to Top Button</title>
+    <style>
+        /* Styles for the back-to-top button */
+        .back-to-top {
+            position: fixed; /* Stays in place even when scrolling */
+            bottom: 20px; /* Distance from the bottom of the screen */
+            right: 20px; /* Distance from the right side */
+            padding: 10px 15px;
+            background-color: #007BFF; /* Button color */
+            color: white; /* Text color */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow */
+            display: none; /* Hidden by default */
+            z-index: 1000; /* Ensures it's on top of other elements */
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website!</h1>
+    </header>
+    <main>
+        <p>Scroll down to see the "Back to Top" button in action.</p>
+        <!-- Filler content to enable scrolling -->
+        <div style="height: 2000px;"></div>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">Top</button>
+
+    <script>
+        // Get the button element
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show button when scrolling down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Show after scrolling 300px
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Scroll to top when button is clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scrolling effect
+            });
+        });
+    </script>
+</body>
+</html>
